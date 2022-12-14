@@ -3,9 +3,16 @@ import menu from "./data";
 import Product from "./components/Product";
 import Header from "./components/Header";
 import { useState } from "react";
+import TopNav from "./components/TopNav";
+import Cart from "./components/Cart";
 
 function App() {
   const [products, setProducts] = useState(menu);
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const showCloseModal = () => {
+    setIsModalVisible((prevIsModalVisible) => !prevIsModalVisible);
+  };
 
   const CategoryFilter = (categoria) => {
     if (categoria === "all") {
@@ -20,6 +27,8 @@ function App() {
 
   return (
     <div className="main">
+      {isModalVisible && <Cart onShow={showCloseModal} />}
+      <TopNav modal={showCloseModal} />
       <Header CategoryFilter={CategoryFilter} />
       <main className="content">
         {products.map((product) => {

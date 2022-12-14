@@ -45,6 +45,46 @@
   font-weight: bold;
 }
 
+.item form {
+  grid-column: span 2;
+  color: #617d98;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item form div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.item form input {
+  color: #617d98;
+  width: 50px;
+  height: 25px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.item form button {
+  background-color: transparent;
+  color: var(--var-gold);
+  padding: 5px;
+  font-weight: bold;
+  border: 2px solid var(--var-gold);
+  border-radius: 2px;
+  text-transform: capitalize;
+  transition: all 0.3s ease-in-out;
+}
+
+.item form button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: var(--var-gold);
+}
+
 article.item:last-child {
   margin-bottom: 100px;
 }

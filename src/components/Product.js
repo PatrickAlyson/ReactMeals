@@ -11,6 +11,21 @@ export default function Product(props) {
         <p className={classes["info-price"]}>${price}</p>
         <hr></hr>
         <p className={classes["info-desc"]}>{desc}</p>
+        <form action="">
+          <div>
+            <label htmlFor="amount">Amount</label>
+            <input
+              type="number"
+              min="1"
+              max="5"
+              step="1"
+              defaultValue="1"
+              name="amount"
+              id="amount"
+            />
+          </div>
+          <button>+ add</button>
+        </form>
       </div>
     </article>
   );
