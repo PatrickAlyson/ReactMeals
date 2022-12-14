@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { MdFastfood } from "react-icons/md";
 import { BsCart4 } from "react-icons/bs";
 import classes from "./TopNav.module.css";
+import CartContext from "../store/cart-context";
 
 function TopNav(props) {
+  const cartCtx = useContext(CartContext);
+
+  const numberOfCartItems = cartCtx.items.reduce((currentNumber, item) => {
+    return currentNumber + item.amount;
+  }, 0);
   return (
     <div className={classes.top}>
       <span>
@@ -15,7 +21,7 @@ function TopNav(props) {
           <BsCart4 />
         </span>
         <span>Your Cart</span>
-        <span>99</span>
+        <span>{numberOfCartItems}</span>
       </button>
     </div>
   );

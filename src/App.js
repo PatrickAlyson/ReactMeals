@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import { useState } from "react";
 import TopNav from "./components/TopNav";
 import Cart from "./components/Cart";
+import CartProvider from "./store/CartProvider";
 
 function App() {
   const [products, setProducts] = useState(menu);
@@ -26,16 +27,18 @@ function App() {
   };
 
   return (
-    <div className="main">
-      {isModalVisible && <Cart onShow={showCloseModal} />}
-      <TopNav modal={showCloseModal} />
-      <Header CategoryFilter={CategoryFilter} />
-      <main className="content">
-        {products.map((product) => {
-          return <Product props={product} key={product.id} />;
-        })}
-      </main>
-    </div>
+    <CartProvider>
+      <div className="main">
+        {isModalVisible && <Cart onShow={showCloseModal} />}
+        <TopNav modal={showCloseModal} />
+        <Header CategoryFilter={CategoryFilter} />
+        <main className="content">
+          {products.map((product) => {
+            return <Product props={product} key={product.id} />;
+          })}
+        </main>
+      </div>
+    </CartProvider>
   );
 }
 
