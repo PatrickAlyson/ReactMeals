@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
-import { MdFastfood } from "react-icons/md";
-// import { BsCart } from "react-icons/bs";
-import classes from "./TopNav.module.css";
+// components
 import CartContext from "../store/cart-context";
+// css, icons
+import { MdFastfood } from "react-icons/md";
+import classes from "./TopNav.module.css";
 
 function TopNav(props) {
   const cartCtx = useContext(CartContext);
@@ -17,9 +18,6 @@ function TopNav(props) {
       </span>
 
       <button onClick={props.modal}>
-        {/* <span>
-          <BsCart />
-        </span> */}
         <span className={classes["icon-number"]}>{numberOfCartItems}</span>
       </button>
     </div>

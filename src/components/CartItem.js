@@ -1,4 +1,5 @@
 import React from "react";
+// icons, css
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import classes from "./CartItem.module.css";
 

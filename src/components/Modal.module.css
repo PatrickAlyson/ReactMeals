@@ -11,8 +11,8 @@
 .modal {
   position: fixed;
   top: 20vh;
-  left: 5%;
-  width: 90%;
+  left: 20%;
+  width: 60%;
   background-color: white;
   padding: 1rem;
   border-radius: 14px;
@@ -21,10 +21,19 @@
   animation: slide-down 300ms ease-out forwards;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .modal {
     width: 40rem;
     left: calc(50% - 20rem);
+  }
+} */
+
+@media (max-width: 768px) {
+  .modal {
+    width: 80%;
+    left: 10%;
+    right: 10%;
+    min-width: 370px;
   }
 }
 

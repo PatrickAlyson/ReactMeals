@@ -1,38 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
+// css
 import classes from "./Navbar.module.css";
 
-export default function Navbar({ CategoryFilter }) {
+export default function Navbar(props) {
+  const [isActive, setIsActive] = useState("all");
+  const { CategoryFilter, categories } = props;
+
   return (
     <nav className={classes.navbar}>
       <ul>
-        <li
-          onClick={() => {
-            CategoryFilter("all");
-          }}
-        >
-          All
-        </li>
-        <li
-          onClick={() => {
-            CategoryFilter("breakfast");
-          }}
-        >
-          Breakfast
-        </li>
-        <li
-          onClick={() => {
-            CategoryFilter("lunch");
-          }}
-        >
-          Lunch
-        </li>
-        <li
-          onClick={() => {
-            CategoryFilter("shakes");
-          }}
-        >
-          Shakes
-        </li>
+        {categories.map((categorie) => {
+          return (
+            <li
+              key={categorie}
+              onClick={() => {
+                CategoryFilter(categorie);
+                setIsActive(categorie);
+              }}
+              className={`${isActive === categorie ? classes.active : ""}`}
+            >
+              {categorie}
+            </li>
+          );
+        })}
       </ul>
     </nav>
   );

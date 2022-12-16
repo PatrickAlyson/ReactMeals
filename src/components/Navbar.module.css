@@ -18,3 +18,8 @@
   background-color: var(--var-gold);
   color: white;
 }
+
+.active {
+  background-color: var(--var-gold);
+  color: white;
+}

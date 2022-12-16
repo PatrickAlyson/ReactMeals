@@ -1,5 +1,7 @@
 import React, { useRef, useState, useContext } from "react";
+// components
 import CartContext from "../store/cart-context";
+// css
 import classes from "./Product.module.css";
 
 export default function Product(props) {
