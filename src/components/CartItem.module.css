@@ -17,6 +17,10 @@
   gap: 5px;
 }
 
+.cart-info__info > h2 {
+  font-size: 1.3rem;
+}
+
 .price {
   display: flex;
   flex-direction: row;
@@ -58,4 +62,14 @@
 .btn button:hover {
   background: var(--var-gold);
   color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .price {
+    gap: 20px;
+  }
+
+  .price span {
+    padding: 3px 8px;
+  }
 }

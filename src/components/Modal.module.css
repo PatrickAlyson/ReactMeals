@@ -21,19 +21,11 @@
   animation: slide-down 300ms ease-out forwards;
 }
 
-/* @media (min-width: 768px) {
-  .modal {
-    width: 40rem;
-    left: calc(50% - 20rem);
-  }
-} */
-
 @media (max-width: 768px) {
   .modal {
     width: 80%;
     left: 10%;
     right: 10%;
-    min-width: 370px;
   }
 }
 

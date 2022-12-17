@@ -6,8 +6,7 @@
   width: 100%;
   padding: 10px 20px;
   color: var(--var-gray);
-  font-size: 2.5rem;
-  min-width: 480px;
+  font-size: 2rem;
 }
 
 .top > span {
@@ -36,16 +35,25 @@
 
 .top button:hover {
   cursor: pointer;
-  /* color: white; */
-  /* background-color: var(--var-gold); */
   background-color: rgba(0, 0, 0, 0.05);
 }
 
 .top button span {
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 
 .top button span.icon-number {
   font-size: 1rem;
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .top button {
+    width: 60px;
+    height: 60px;
+  }
+
+  .top button span.icon-number {
+    font-size: 0.8rem;
+  }
 }
