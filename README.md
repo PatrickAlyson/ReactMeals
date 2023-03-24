@@ -1,6 +1,10 @@
 ## About this project
 
-This is a small food ordering web app made with [React](https://react.dev/). It is possible to filter the meals by categories and add them to your cart. The cart is functional, you can add and remove items from it.
+This is a small food ordering web app made with React. 
+
+One of the main features of this app is the ability to filter meals by categories. This makes it easy for users to find the type of food they are looking for.
+
+Another key feature of the app is the functional cart. Users can add meals to their cart with just a few clicks, and they can also remove them if they change their mind. The cart keeps track of the total cost of the order, and it updates in real-time as items are added or removed. 
 
 ## Live demo at [https://reactmealsapp.netlify.app/](https://reactmealsapp.netlify.app/)
 
